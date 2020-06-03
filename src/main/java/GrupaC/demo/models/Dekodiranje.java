@@ -4,9 +4,12 @@ import  javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name="Dekodiranje")
+ @Table(name="Dekodiranje")
 
 public class Dekodiranje {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer DekodiranjeID;
     @Column(name = "Marka")
     private String Marka;
     @Column(name = "Model")
@@ -16,7 +19,7 @@ public class Dekodiranje {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="KorpaID")
-    private Set<Korpa> notes;
+    private Set<Korpa> IDKorpe;
 
     public Dekodiranje()
     {

@@ -4,9 +4,8 @@ import  javax.persistence.*;
 import java.util.*;
 
 
-
 @Entity
-@Table(name="Prodavnica")
+@Table(name="Korpa")
 
 
 
@@ -22,21 +21,30 @@ public class Korpa {
     @Column(name = "Cena")
     private Double Cena;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="KorisnikID")
-    private Set<Korisnik> notes;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name="KorisnikID")
+//    private Set<Korisnik> IDKorisnika;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="IMEI")
-    private Set<Dekodiranje> notes1;
+
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="TelefonID")
-    private Set<Telefon> notes2;
+    private Set<Telefon> TelefonID;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="OpremaID")
-    private Set<Oprema> notes3;
+    private Set<Oprema> IDOpreme;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="DekodiranjeID")
+    private Set<Telefon> DekodiranjeID;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name="KorisnikID")
+    private Set<Telefon> KorisnikID;
+
+
+
 
 
     public Korpa()

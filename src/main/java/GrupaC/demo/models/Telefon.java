@@ -20,6 +20,8 @@ public class Telefon {
     private String Model;
     @Column(name = "OperativniSistem")
     private String OperativniSistem;
+    @ManyToOne
+    private TipArtikla tip;
 
     public  Telefon()
     {

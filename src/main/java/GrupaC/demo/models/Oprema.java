@@ -15,27 +15,21 @@ public class Oprema {
     private Integer OpremaID;
     @Column(name = "Cena")
     private Integer Cena;
-    @Column(name = "TipArtikla")
-    private String TipArtikla;
+    @ManyToOne
+    private TipArtikla tip;
+
 
     public Oprema()
     {
 
     }
-    public Oprema(Integer opremaID, Integer cena, String tipArtikla) {
+    public Oprema(Integer opremaID, Integer cena) {
         OpremaID = opremaID;
         Cena = cena;
-        TipArtikla = tipArtikla;
+
 
     }
 
-    public String getTipArtikla() {
-        return TipArtikla;
-    }
-
-    public void setTipArtikla(String tipArtikla) {
-        TipArtikla = tipArtikla;
-    }
 
     public Integer getCena() {
         return Cena;

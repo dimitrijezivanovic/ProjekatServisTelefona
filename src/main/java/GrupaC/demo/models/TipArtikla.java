@@ -11,13 +11,26 @@ import java.util.Set;
 @Table(name="TipArtikla")
 
 public class TipArtikla {
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="OpremaID")
-    private Set<Oprema> notes;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name="TelefonID")
+//    private Set<Telefon> TelefonID;
+@Id
+@GeneratedValue(strategy = GenerationType.AUTO)
+private Integer ArtikalID;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="TelefonID")
-    private Set<Telefon> notes1;
+    @OneToMany( mappedBy = "tip",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+
+    private Set<Oprema> opreme;
+
+    @OneToMany( mappedBy = "tip",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+
+    private Set<Telefon> telefoni;
 
 
 

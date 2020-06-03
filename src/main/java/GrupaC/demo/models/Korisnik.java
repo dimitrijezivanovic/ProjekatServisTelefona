@@ -10,6 +10,7 @@ public class Korisnik {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer KorisnikID;
+
     @Column(name = "Mail")
     private String Mail;
     @Column(name = "Sifra")
@@ -23,9 +24,19 @@ public class Korisnik {
     @Column(name = "DatumRodjenja")
     private Date DatumRodjenja;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="KorpaID")
-    private Set<Korpa> notes;
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name="KorpaID")
+//    private Set<Korpa> korpa1;
+
+
+
+//    @OneToOne( mappedBy = "Korisnici1",
+//            cascade = CascadeType.ALL,
+//            orphanRemoval = true
+    //)
+
+//    private Set<Korisnik> Korisnici1;
+
 
 
 
