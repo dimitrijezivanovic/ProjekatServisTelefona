@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Pocetna</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="login.html">Log in</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="registracija.html">Registracija</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+</ul>
+<form style="margin-left: 400px; margin-right: 400px; margin-top: 100px;">
+    <div class="jumbotron">
+        <h1 class="display-4">Dobrodosli u prodavnicu mobilnih telefona</h1>
+        <p class="lead">U ponudi imamo dosta telefona, nudimo usluge popravke telefona, dekodiranja telefona.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">O nama</a>
+    </div>
+</form>
+</body>
+</html>
